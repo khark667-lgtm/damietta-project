@@ -1,0 +1,1105 @@
+
+
+
+/* ==================== إعادة تعيين الأساسيات ==================== */
+* { /* يطبق القواعد التالية على كل العناصر في الصفحة */
+    margin: 0; /* يضبط قيمة الهامش الخارجية لكل عنصر إلى 0 */
+    padding: 0; /* يضبط قيمة الحشو الداخلي لكل عنصر إلى 0 */
+    box-sizing: border-box; /* يغير طريقة حساب القياسات لتشمل الحشوة والحدود داخل العرض والارتفاع */
+    font-family: var(--font-family-main); /* يطبق خط المتغير --font-family-main على كل عنصر */
+
+}
+
+
+/*=============================================================================================================*/
+/*=========================================== بداية التنسيقات العامة =========================================*/
+/*=============================================================================================================*/
+
+body {
+  font-family: 'Lato', serif;  /* خط رسمي */
+  scroll-behavior: smooth; /* يتيح للصفحة تمريرًا ناعمًا عند الانتقال لروابط داخلية */
+  background-color: #083e47;   /* لون خلفية غامق */
+}
+
+/*==================================== header header header header ===============================================*/
+/*==================================== header header header header ===============================================*/
+/*==================================== header header header header ===============================================*/
+
+.header {
+  background-color: #083e47;   /* لون خلفية غامق */
+  color: white;                /* لون النص أبيض */
+  position: sticky;            /* يخلي الهيدر يفضل ظاهر فوق الصفحة أثناء التمرير */
+  top: 0;                      /* يخليه يثبت عند أعلى الصفحة */
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center; /* يجعل النصوص داخل العنصر مركزيّة المحاذاة */
+  z-index: 5;                            /* ← دا بتاع إننا نخلي الخط تحت العناصر — مش فوقهم */
+}
+
+
+
+.header.scrolled {  /* الحالة بعد أول تمرير */
+  background-color: rgba(6, 70, 53, 0.1); /* شفافية الزجاج */
+  backdrop-filter: blur(10px);            /* تأثير زجاجي */
+  border-bottom: 1px solid white;         /* الخط الأبيض تحت الهيدر */
+  box-shadow: 0 0 10px rgba(255,255,255,0.1); /* توهّج خفيف للخط */
+}
+
+
+
+.iandt {
+display: flex;
+flex-direction: row; 
+align-items: center;     /* يخليهم في نفس الخط الرأسي */ 
+}
+
+
+
+.icna{
+  display: flex;           /* يخلي العناصر جنب بعض */
+  align-items: center;     /* يخليهم في نفس الخط الرأسي */
+  gap: 8px;               /* مسافة صغيرة بينهم */
+  padding: 5px;
+}
+
+
+
+#icon {
+  width: 50px;   /* العرض */
+  height: auto;   /* الارتفاع يتغير تلقائيًا للحفاظ على التناسب */
+}
+
+
+
+.NARSS {
+   font-size: clamp(5px, 5vw, 17px);             /* حجم الخط لعنوان الهيدر */
+   text-align: center;
+   color: #ffffff;
+}
+
+
+
+.vertical-line {
+  width: 1px;            /* السمك */
+  height: 70%;         /* الطول */
+  max-height: 100px;
+  background-color: rgb(255, 255, 255); /* لون الخط */
+  margin: 0px 10px;          /* يخليه في النص */
+  padding: 10px 0px;
+}
+
+
+
+.nav-bar { /* للتعديل على خصاص قائمة التنقل */
+/* فااااارغ */
+}
+
+
+
+.nav-bar a{ /* للتعديل على خصاص روابط قائمة التنقل */
+  color: white;                /* لون الروابط أبيض */
+  text-decoration: none;       /* إزالة الخط تحت الرابط */
+  margin: 20px 10px;              /* مسافة رأسية ثم أفقية بين الروابط */
+  font-size: clamp(5px, 5vw, 14px);             /* حجم الخط */ 
+  transition: transform 0.3s; /* تأثير ناعم */
+  display: inline-block;               /* يخلي الرابط يتصرف ككتلة داخلية */
+  font-weight: bold;           /* يجعل الخط عريض */
+}
+
+
+
+.nav-bar a:hover {   /* تأثير عند المرور بالماوس */
+  color: #22e69a;              /* تغيير اللون */
+  transform: scale(1.1);  /* تكبير الرابط عند المرور بالماوس */
+}
+
+
+
+#title-of-header{  /* للتعديل على خصاص عنوان الهيدر */
+  font-size: clamp(5px, 5vw, 20px);             /* حجم الخط لعنوان الهيدر */
+  color: #22eca9;
+  font-weight: bold;           /* يجعل الخط عريض */ 
+  margin: 14px 0px;              /* مسافة رأسية ثم أفقية */
+  padding: 0px 5px;
+}
+
+/*=========================================== home home home home ================================================*/
+/*=========================================== home home home home ================================================*/
+/*=========================================== home home home home ================================================*/
+
+.home {      /* للتعديل على خصاص الهوم بشكل عام */
+  display: flex;               /* نخلي الهوم تستخدم الفليكس */
+  justify-content: center;     /* يوسطن أفقيًا */
+  align-items: center;         /* يوسطن رأسيًا */
+  height: 100vh;               /* يخلي الهوم طولها قد طول الشاشة */
+
+   /* الخلفية: لون + صورة + شفافية الصورة */
+  background-image: 
+    linear-gradient(rgba(8, 62, 71, 0.8), rgba(9, 78, 40, 0.8)), /* لون مع شفافية */
+    url('Logo/dameitta\ google\ earth.jpg');
+
+  background-repeat: no-repeat;  /* تمنع تكرار الصورة */
+  background-size: cover;        /* تغطي كامل العنصر */
+  background-position: center;   /* توضع في المنتصف */
+}
+
+.hero {
+  text-align: center; /* يجعل النصوص داخل العنصر مركزيّة المحاذاة */
+}
+
+
+
+.home-link {      /* للتعديل على خصاص رابط الهوم */
+  display: inline-block;        /* يخلي الرابط يتصرف ككتلة داخلية */
+  background-color: #24a774;    /* لون خلفية مميز */
+  color: white;                 /* لون النص أبيض */
+  text-decoration: none;        /* إزالة الخط تحت الرابط */
+  font-size: clamp(5px, 5vw, 18px);              /* حجم الخط */
+  border-radius: 5px;           /* حواف دائرية خفيفة */
+  transition: background-color 0.3s, transform 0.3s; /* تأثير ناعم */
+  font-weight: bold;            /* يجعل الخط عريض */
+  margin: 0px 0px;              /* مسافة رأسية ثم أفقية */
+  padding: 10px 20px;           /* حدود حول العنصر */
+}
+
+
+
+.home-link:hover {    /* تأثير عند المرور بالماوس */
+  background-color: #15bd7c;    /* تغيير لون الخلفية عند المرور بالماوس */
+  transform: scale(1.05);        /* تكبير الرابط عند المرور بالماوس */
+}
+
+
+
+#learning {   /* للتعديل على خصاص عنوان الهوم */
+  font-size: clamp(24px, 5vw, 40px);             /* حجم الخط لعنوان الهوم */
+  color: #22eca9;
+  font-weight: bold;           /* يجعل الخط عريض */
+}
+
+
+
+.home p {   /* للتعديل على خصاص الفقرات داخل الهوم */
+  font-size: clamp(5px, 5vw, 20px);             /* حجم الخط للفقرات داخل الهوم */
+  color: wheat;
+  margin: 15px 0px;              /* مسافة رأسية ثم أفقية */
+}
+
+
+/*=============================================================================================================*/
+/*========================================= project project project project=======================================*/
+/*=============================================================================================================*/
+
+.project {
+    background:  rgb(3, 49, 53);
+    padding: 1rem;
+}
+
+
+
+.topp{
+  display: flex;               /* نخلي الأب فليكس */
+  justify-content: center;     /* يوسطن أفقي */
+  align-items: center;         /* يوسطن رأسي */
+}
+
+
+
+.top-about {
+  font-size: clamp(5px, 5vw, 50px);
+  color: rgb(255, 255, 255);
+  padding: 10px 0px;    /* مسافة داخلية بين النص والحواف */
+    text-align: center; /* يجعل النصوص داخل العنصر مركزيّة المحاذاة */
+}
+
+
+
+.under-about {
+  font-size: clamp(5px, 5vw, 20px);
+  color: white;
+  padding: 1rem;        /* مسافة داخلية */
+  width: 700px;               /* عرض المستطيل */
+  margin: auto;          /* دي اللي بتوسطن المربع نفسه */
+  max-width: 80%;       /* علشان لو الشاشة صغيرة ما يطلعش برا */
+  text-align: center;   /* يخلي النص في النص */
+}
+
+/*=================================*/
+
+.sq {
+  padding: 0px 0px;
+  gap: 30px;   /* مسافة أفقية بين الكروت */
+  flex-direction: row; 
+      display: flex;               /* نخلي الهوم تستخدم الفليكس */
+    justify-content: center;     /* يوسطن أفقيًا */
+    text-align: center; /* يجعل النصوص داخل العنصر مركزيّة المحاذاة */
+}
+
+
+
+.card {
+  background-color: rgb(26, 45, 48);    /* لون المستطيل */
+  border-radius: 10px;        /* حواف مستديرة */
+  padding: 20px 15px;    /* مسافة داخلية بين النص والحواف */ 
+  width: 100%;
+  max-width: 300px; 
+  height: auto;             /* عرض المستطيل */
+  /*text-align: center;         /* يوسّط النصوص */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.9); /* ظل خفيف */
+  margin: 40px 1px;   /* مسافة يمين ويسار بين الكروت */
+  color: white;
+  font-size: clamp(5px, 5vw, 15px);
+}
+
+
+
+.card .icons {
+  width: 60px;                /* حجم الأيقونة */
+  margin-bottom: 0px;       /* يغير المسافة بين الايقونه والنص */
+  padding: 0px 0px;    /* مسافة داخلية بين النص والحواف */
+}
+
+
+.card h2 {
+  margin-top: 0px;
+  font-size: clamp(5px, 5vw, 24px);
+  padding: 10px 0px;    /* مسافة داخلية بين النص والحواف */
+}
+
+
+.card p {
+  font-size: clamp(5px, 5vw, 16px);
+}
+
+/*=================================*/
+
+.sqdown {
+  background-color: rgb(26, 45, 48);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.9); /* ظل خفيف */
+  color: white;
+
+   width: 100%;          /* ياخد عرض الشاشة كله افتراضيًا */
+   max-width: 1000px;    /* لكن مايزيدش عن 1000px */
+   margin: auto;          /* دي اللي بتوسطن المربع نفسه */
+   height: auto;
+
+  border-radius: 15px;        /* حواف مستديرة */ 
+     display: flex;               /* نخلي الهوم تستخدم الفليكس */
+     flex-direction: column;
+     margin: 20px auto;
+}
+
+
+
+.sqdown h1 {
+text-align: center; /* يجعل النصوص داخل العنصر مركزيّة المحاذاة */
+padding: 1rem 1rem;        /* مسافة داخلية */
+font-size: clamp(5px, 5vw, 25px);
+}
+
+
+.both {
+display: flex;
+flex-direction: row; 
+  gap: 5rem 5rem;
+  padding: 2rem 4rem;        /* مسافة داخلية */
+  text-align: left; /* يجعل النصوص داخل العنصر مركزيّة المحاذاة */
+  justify-content: center;     /* يوسطن أفقيًا */
+}
+
+
+.both h3 {
+  color: #15bd7c;
+}
+
+/*========Methodology===Methodology======Methodology=======Methodology=========*/
+/*========Methodology===Methodology======Methodology=======Methodology=========*/
+
+
+.Methodology {
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+   text-align: center;   /* يخلي النص في النص */
+}
+
+.Methodology h2{
+  font-size: clamp(5px, 5vw, 40px);
+  padding: 5px 5px;
+  margin: 10px 5px;
+}
+
+.Methodology p{
+  font-size: clamp(5px, 5vw, 20px);
+  color: white;
+  padding: 1rem;        /* مسافة داخلية */
+  width: 730px;               /* عرض المستطيل */
+  margin: auto;          /* دي اللي بتوسطن المربع نفسه */
+  max-width: 80%;       /* علشان لو الشاشة صغيرة ما يطلعش برا */
+}
+
+/*========================================================TIMELINE TIMELINE TIMELINE===========================================================*/
+/*========================================================TIMELINE TIMELINE TIMELINE===========================================================*/
+/*========================================================TIMELINE TIMELINE TIMELINE===========================================================*/
+
+
+/* دا بتاع الحاوية الرئيسية — يخليها في المنتصف ويعمل خط عمودي */
+.timeline {
+    position: relative;                    /* ← دا بتاع إننا نقدر نرسم الخط في المنتصف */
+    max-width: 1200px;                     /* ← دا بتاع أقصى عرض — يناسب الشاشات الكبيرة */
+    margin: 60px auto;                     /* ← دا بتاع التوسيط الأفقي + مسافة من فوق وتحت */
+   /* padding: 0 20px;                       /* ← دا بتاع المسافة من الجانبين — يمنع اللمس */
+}
+
+/* دا بتاع الخط العمودي اللي في المنتصف */
+.timeline::before {
+    content: '';                           /* ← دا بتاع إننا نرسم خط وهمي — من غيره ما يظهرش */
+    position: absolute;                    /* ← دا بتاع إننا نحرك الخط في الصفحة */
+    top: 0;                                /* ← دا بتاع إننا نبدأ الخط من أول القسم */
+    bottom: 0;                             /* ← دا بتاع إننا نخلص الخط في آخر القسم */
+    left: 50%;                             /* ← دا بتاع إننا نخلي الخط في المنتصف أفقيًا */
+    width: 1px;                            /* ← دا بتاع عرض الخط */
+    background: linear-gradient(to bottom, #22eca9, #15bd7c); /* ← دا بتاع لون الخط المتدرج */
+    transform: translateX(-50%);           /* ← دا بتاع إننا نظبط الخط في المنتصف بالظبط */
+    z-index: 1;                            /* ← دا بتاع إننا نخلي الخط تحت العناصر — مش فوقهم */
+}
+
+/* دا بتاع كل خطوة (item) */
+.timeline-item {
+    display: flex;                         /* ← دا بتاع إننا نخلي الأيقونة والمربع جنب بعض */
+    align-items: center;                   /* ← دا بتاع إننا نخليهم متوسطين رأسيًا */
+    margin: 50px 0;                        /* ← دا بتاع المسافة بين الخطوات */
+    position: relative;                    /* ← دا بتاع إننا نرسم النقطة على الخط */
+}
+
+/* دا بتاع النقطة الصغيرة اللي على الخط */
+.timeline-item::after {
+    content: '';                           /* ← دا بتاع إننا نرسم دائرة وهمية — من غيره ما يظهرش */
+    position: absolute;                    /* ← دا بتاع إننا نحرك الدائرة في الصفحة */
+    top: 50%;                              /* ← دا بتاع إننا نخلي الدائرة في المنتصف رأسيًا */
+    left: 50%;                             /* ← دا بتاع إننا نخلي الدائرة في المنتصف أفقيًا */
+    width: 2px;                           /* ← دا بتاع عرض الدائرة */
+    height: 2px;                          /* ← دا بتاع ارتفاع الدائرة */
+    background: white;                     /* ← دا بتاع لون الدائرة */
+    border-radius: 50%;                    /* ← دا بتاع إننا نخليها دائرة */
+    transform: translate(-50%, -50%);      /* ← دا بتاع إننا نظبطها في المنتصف بالظبط */
+    z-index: 2;                            /* ← دا بتاع إننا نخليها فوق الخط — مش تحته */
+    border: 4px solid #22eca9;             /* ← دا بتاع إطار للدائرة — يبرزها */
+}
+
+/* دا بتاع الأيقونة */
+.time-icon {
+    width: 50px;                           /* ← دا بتاع عرض الأيقونة */
+    height: auto;                          /* ← دا بتاع ارتفاع الأيقونة */
+    /*background: #22eca9;                   /* ← دا بتاع لون الخلفية — يخليها داخل دائرة */
+   /* border-radius: 50%;                    /* ← دا بتاع إننا نخليها دائرة */
+    /*padding: 15px;                         /* ← دا بتاع المسافة بين الحواف والأيقونة — يخليها متزنة */
+   /* box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* ← دا بتاع الظل — يبرزها */
+    z-index: 2;                            /* ← دا بتاع إننا نخليها فوق الخط */
+    position: relative;                    /* ← دا بتاع إننا نقدر نتحكم في موقعها */
+    transition: transform 0.3s ease;        /* ← دا بتاع تأثير ناعم عند الهوفر */
+}
+
+.time-icon:hover {
+    transform: scale(1.05);                /* ← دا بتاع إنها تكبر شوية عند المرور بالماوس */
+}
+
+/* دا بتاع المربع اللي فيه النص */
+.time-text {
+    background: rgba(255,255,255,0.08);    /* ← دا بتاع لون الخلفية الشفاف */
+    backdrop-filter: blur(8px);            /* ← دا بتاع تأثير الزجاج — أنيق */
+    border-radius: 12px;                   /* ← دا بتاع الحواف المستديرة */
+    padding: 25px ;                         /* ← دا بتاع المسافة الداخلية — يفصل النص عن الحواف */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2); /* ← دا بتاع الظل — يبرز المربع */
+    max-width: 550px;                      /* ← دا بتاع أقصى عرض — يمنع الانتشار */
+    margin:auto 30px;                     /* ← دا بتاع المسافة بين الأيقونة والمربع — في الخطوات الزوجية */
+    transition: all 0.3s ease;              /* ← دا بتاع تأثير ناعم عند الهوفر */
+    border: 1px solid rgba(255,255,255,0.1); /* ← دا بتاع الإطار الخفيف */
+}
+
+.time-text:hover {
+    transform: translateY(-5px);            /* ← دا بتاع إنه يتحرك شوية عند الهوفر — يعطي تفاعل */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* ← دا بتاع ظل أكبر — يبرز أكثر */
+}
+
+/* دا بتاع عنوان المرحلة */
+.time-text h2 {
+    font-size: 1.5rem;                     /* ← دا بتاع حجم الخط */
+    color: #22eca9;                        /* ← دا بتاع لون الخط — مميز */
+    margin-bottom: 12px;                   /* ← دا بتاع المسافة من تحت */
+    font-weight: bold;                     /* ← دا بتاع الخط العريض */
+}
+
+/* دا بتاع الوصف */
+.time-text h4 {
+    font-size: 1.1rem;                     /* ← دا بتاع حجم الخط */
+    color: #e0e0e0;                        /* ← دا بتاع لون الخط — فاتح وسهل القراءة */
+    line-height: 1.6;                      /* ← دا بتاع المسافة بين السطور — تحسن القراءة */
+    margin-bottom: 15px;                   /* ← دا بتاع المسافة من تحت */
+    font-weight: 400;                      /* ← دا بتاع سمك الخط — عادي مش عريض */
+}
+
+/* دا بتاع المصدر أو الأدوات */
+.time-text p {
+    font-size: 0.95rem;                    /* ← دا بتاع حجم الخط — أصغر شوية */
+    color: #22eca9;                        /* ← دا بتاع لون الخط — نفس لون العناوين */
+    font-style: italic;                    /* ← دا بتاع الخط المائل — يعطي طابع تقني */
+    margin: 0;                             /* ← دا بتاع إنه يلغي الهوامش الافتراضية */
+}
+
+/* دا بتاع إنه نعكس اتجاه الخطوات الفردية (1، 3، 5...) */
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;           /* ← دا بتاع إنه نعكس اتجاه الصف — الأيقونة تروح لجهة، المربع لجهة تانية */
+}
+
+/* دا بتاع إنه نعدل المسافات في الخطوات الفردية */
+.timeline-item:nth-child(odd) .time-text {                    
+    margin:auto 30px;                    /* ← دا بتاع إنه نضيف مسافة من اليمين — علشان يفضل بينها وبين الأيقونة مسافة */
+}
+
+/*======================================================== Statistical Analysis Statistical Analysis ===========================================================*/
+/*======================================================== Statistical Analysis Statistical Analysis ===========================================================*/
+/*======================================================== Statistical Analysis Statistical Analysis ===========================================================*/
+
+.Statistical-Analysis {
+  color: white;
+  padding: 1rem;        /* مسافة داخلية */
+  width: 1200px;               /* عرض المستطيل */
+  margin: auto;          /* دي اللي بتوسطن المربع نفسه */
+  max-width: 80%;       /* علشان لو الشاشة صغيرة ما يطلعش برا */
+  /*text-align: center;   /* يخلي النص في النص */
+}
+
+
+.Statistical-Analysis h1{
+font-size: clamp(5px, 5vw, 50px);
+padding: 1rem 1rem;        /* مسافة داخلية */
+}
+
+.Statistical-Analysis h3{
+  font-size: clamp(5px, 5vw, 30px);
+}
+
+.Statistical-Analysis p{
+  padding: 1rem 1rem;        /* مسافة داخلية */
+font-size: clamp(5px, 5vw, 17px);
+}
+
+.uli li{
+font-size: clamp(5px, 5vw, 15px);
+text-align: left;   /* يخلي النص في النص */
+ margin: 1rem 1rem;
+}
+
+/*======================================================== TABLES TABLES TABLES TABLES ===========================================================*/
+/*======================================================== TABLES TABLES TABLES TABLES ===========================================================*/
+/*======================================================== TABLES TABLES TABLES TABLES ===========================================================*/
+
+.tables {
+  display: flex;
+  flex-direction: column;
+  transform: translateX(0%);           /* ← دا بتاع إننا نظبط الخط في المنتصف بالظبط */
+  width: 100%;
+   max-width: 1500px;
+   height: auto;
+   margin: auto;
+   gap: 3rem;
+   padding: 4rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* ← دا بتاع ظل أكبر — يبرز أكثر */
+
+}
+
+.tables img{
+
+  width: 100%;
+   max-width: 1500px;
+   height: auto;
+   margin: auto;
+   gap: 1rem;
+   padding: 1rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* ← دا بتاع ظل أكبر — يبرز أكثر */
+
+}
+
+
+/* ===== نسخة الموبايل (Responsive) ===== */
+@media (max-width: 768px) {
+  .tables {
+    padding: 1rem;            /* نقلل البادينج عشان العرض الصغير */
+    gap: 1.5rem;              /* مسافة مناسبة بين الصور */
+    box-shadow: none;         /* نلغي الشادو الكبير عشان الموبايل شكله أنضف */
+  }
+
+  .tables img {
+    width: 100%;              /* الصورة تاخد عرض الشاشة */
+    max-width: 100%;          /* من غير حدود قصوى */
+    height: auto;             /* الارتفاع يتظبط أوتوماتيك */
+    margin: 0 auto;           /* تتظبط في النص */
+    padding: 0.5rem;          /* padding خفيف حوالي الصورة */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* شادو خفيف */
+    border-radius: 8px;       /* حواف ناعمة (اختياري) */
+  }
+}
+
+
+
+
+
+
+
+
+/*======================================================== CANVAS CANVAS CANVAS CANVAS ===========================================================*/
+/*======================================================== CANVAS CANVAS CANVAS CANVAS ===========================================================*/
+/*======================================================== CANVAS CANVAS CANVAS CANVAS ===========================================================*/
+
+/* دا بتاع الحاوية الرئيسية للمخططات */
+.charts-container {
+  display: flex;              /* ← نستخدم Flexbox علشان يسهل التحكم */
+  justify-content: space-between; /* ← نخلي في مسافة بين الكروت */
+  align-items: stretch;       /* ← نخلي الكروت نفس الارتفاع */
+  gap: 20px;                  /* ← مسافة بين الكروت */
+  max-width: 1200px;
+  margin: 60px auto;          /* ← توسيط + مسافة من فوق */
+  padding: 0 20px;            /* ← مسافة من الجانبين — يمنع اللمس */
+}
+
+/* دا بتاع الكارت الأول (المخطط الدائري) */
+.cardcanvas {
+  background: rgba(255,255,255,0.03); /* ← خلفية شفافة */
+  border-radius: 12px;        /* ← حواف مستديرة */
+  padding: 20px;              /* ← مسافة داخلية */
+  box-shadow: 0 8px 18px rgba(0,0,0,0.6); /* ← ظل قوي — يبرز الكارت */
+  flex: 1;                    /* ← ياخد مساحة مرنة — يوزع المساحة مع الكارت التاني */
+  min-width: 0;               /* ← مهم — علشان ما يطلعش برا في الشاشات الصغيرة */
+}
+
+/* دا بتاع الكارت الثاني (المخطط الخطي) — نفس التصميم بالظبط */
+.cardcanva {
+  background: rgba(255,255,255,0.03); /* ← نفس الخلفية */
+  border-radius: 12px;        /* ← نفس الحواف */
+  padding: 20px;              /* ← نفس المسافة الداخلية */
+  box-shadow: 0 8px 18px rgba(0,0,0,0.6); /* ← نفس الظل بالظبط */
+  flex: 1;                    /* ← ياخد مساحة مرنة */
+  min-width: 0;               /* ← مهم — علشان الاستجابة */
+}
+
+/* دا بتاع منطقة الرسم (الـ canvas) — لكل المخططات */
+.chart-wrapper {
+  height: 420px;              /* ← ارتفاع ثابت — يناسب المخططات */
+  position: relative;
+  border-radius: 12px;        /* ← مهم — علشان الـ canvas يكون داخل مستطيل دائري */
+  overflow: hidden;           /* ← مهم — علشان أي جزء يطلع برا يتقتص */
+}
+
+/* دا بتاع الـ canvas نفسه — نخليه يشغل كامل المساحة */
+canvas {
+  width: 100% !important;     /* ← ياخد كامل العرض */
+  height: 100% !important;    /* ← ياخد كامل الارتفاع */
+  display: block;             /* ← يمنع أي مسافات إضافية تحته */
+}
+
+/* دا بتاع العناوين */
+h1 {
+  font-size: 18px;
+  margin: 0 0 12px;           /* ← مسافة من تحت فقط */
+  color: #cfeee1;             /* ← لون فاتح — يناسب الخلفية الداكنة */
+  text-align: center;         /* ← توسيط العنوان */
+  font-weight: bold;          /* ← خط عريض — يلفت الانتباه */
+}
+
+/* دا بتاع التصميم المتجاوب — للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .charts-container {
+    flex-direction: column;   /* ← الكروت تبقى تحت بعض */
+    gap: 30px;                /* ← نزود المسافة بينهم — علشان ما يتزحموش */
+  }
+
+  .chart-wrapper {
+    height: 350px;            /* ← نصغر الارتفاع شوية — يناسب الموبايل */
+  }
+
+  h1 {
+    font-size: 16px;          /* ← نصغر الخط شوية */
+  }
+}
+
+
+/*======================================================== Cards Statistics Section ===========================================================*/
+/*======================================================== Cards Statistics Section ===========================================================*/
+/*======================================================== Cards Statistics Section ===========================================================*/
+
+
+
+/* الحاوية */
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+  flex-wrap: wrap;  /* عشان الموبايل تبقى تحت بعض */
+}
+
+/* الكروت */
+.stat-card {
+  flex: 1;
+  min-width: 200px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* تأثير Hover */
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* العنوان الكبير (النسبة %) */
+.stat-card h2 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* العنوان الصغير */
+.stat-card p {
+  margin: 8px 0;
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* السطر الأخير */
+.stat-card span {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ألوان مخصصة */
+.stat-card.agriculture h2 { color: #94b90fff; }
+.stat-card.urban h2 { color: #ce6917ff; }
+.stat-card.water h2 { color: #3ec8ffff; }
+.stat-card.others h2 { color: #aaa; }
+
+/* للموبايل */
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+
+/*======================================================== KEY KEY KEY KEY KEY ===========================================================*/
+/*======================================================== KEY KEY KEY KEY KEY ===========================================================*/
+/*======================================================== KEY KEY KEY KEY KEY ===========================================================*/
+
+
+
+.key {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.9); /* ظل خفيف */
+  color: rgb(255, 255, 255);
+
+   width: 100%;          /* ياخد عرض الشاشة كله افتراضيًا */
+   max-width: 1000px;    /* لكن مايزيدش عن 1000px */
+   margin: auto;          /* دي اللي بتوسطن المربع نفسه */
+   height: auto;
+
+  border-radius: 15px;        /* حواف مستديرة */ 
+     display: flex;               /* نخلي الهوم تستخدم الفليكس */
+     flex-direction: column;
+     margin: 5px auto;
+}
+
+
+
+.key h1 {
+text-align: center; /* يجعل النصوص داخل العنصر مركزيّة المحاذاة */
+padding: 1rem 1rem;        /* مسافة داخلية */
+font-size: clamp(5px, 5vw, 28px)
+}
+
+
+.bothkey {
+display: flex;
+flex-direction: row; 
+  gap: 3rem 7rem;
+  padding: 2rem 4rem;        /* مسافة داخلية */
+  text-align: left; /* يجعل النصوص داخل العنصر مركزيّة المحاذاة */
+  justify-content: center;     /* يوسطن أفقيًا */
+}
+
+
+.bothkey #h3-1 {
+  color: #3ec8ffff;
+}
+
+.bothkey #h3-2 {
+  color: #94b90fff;
+}
+
+
+/* شاشات التابلت والموبايل */
+@media (max-width: 768px) {
+
+  .bothkey {
+    flex-direction: column;  /* العناصر تيجي تحت بعض */
+    align-items: last baseline;
+    gap: 1rem;
+    text-align: left; /* يخلي النص في النص */
+  }
+
+}
+
+/*======================================================== OMS OMS OMS OMS OMS OMS ===========================================================*/
+/*======================================================== OMS OMS OMS OMS OMS OMS ===========================================================*/
+/*======================================================== OMS OMS OMS OMS OMS OMS ===========================================================*/
+
+
+
+/* سكشن الخرائط */
+.maps {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+/* الخريطة نفسها */
+#map {
+  width: 90%;
+  max-width: 1200px;
+  height: 70vh; /* ارتفاع ثابت */
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  margin: 2rem auto;
+  z-index: 5;
+  box-sizing: border-box;
+}
+
+
+
+
+.legend {
+  background: white;
+  padding: 10px;
+  line-height: 18px;
+  color: #333;
+  font-size: 14px;
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: left;
+}
+
+.legend h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: #111;
+}
+
+.legend i {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  vertical-align: middle;
+  text-align: left;
+}
+
+
+/*======================================================== LayOut LayOut LayOut LayOut ===========================================================*/
+/*======================================================== LayOut LayOut LayOut LayOut ===========================================================*/
+/*======================================================== LayOut LayOut LayOut LayOut ===========================================================*/
+
+
+
+.LayOut {
+  display: flex;
+  flex-direction: column;
+  transform: translateX(0%);           /* ← دا بتاع إننا نظبط الخط في المنتصف بالظبط */
+  width: 100%;
+   max-width: 1500px;
+   height: auto;
+   margin: 2rem auto;
+   gap: 3rem;
+   padding: 4rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* ← دا بتاع ظل أكبر — يبرز أكثر */
+
+}
+
+.LayOut img{
+
+  width: 100%;
+   max-width: 1500px;
+   height: auto;
+   margin: auto;
+   gap: 1rem;
+   padding: 1rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* ← دا بتاع ظل أكبر — يبرز أكثر */
+
+}
+
+
+/* ===== نسخة الموبايل (Responsive) ===== */
+@media (max-width: 768px) {
+  .LayOut {
+    padding: 1rem;            /* نقلل البادينج عشان العرض الصغير */
+    gap: 1.5rem;              /* مسافة مناسبة بين الصور */
+    box-shadow: none;         /* نلغي الشادو الكبير عشان الموبايل شكله أنضف */
+  }
+
+  .LayOut img {
+    width: 100%;              /* الصورة تاخد عرض الشاشة */
+    max-width: 100%;          /* من غير حدود قصوى */
+    height: auto;             /* الارتفاع يتظبط أوتوماتيك */
+    margin: 0 auto;           /* تتظبط في النص */
+    padding: 0.5rem;          /* padding خفيف حوالي الصورة */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* شادو خفيف */
+    border-radius: 8px;       /* حواف ناعمة (اختياري) */
+  }
+}
+
+
+
+/*====================================================== FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER =====================================================*/
+/*====================================================== FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER =====================================================*/
+/*====================================================== FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER =====================================================*/
+
+
+.footer {
+  color: white;
+  font-size: clamp(3px, 5vw, 15px);
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #021a25;
+}
+
+.footer h1{
+font-size: clamp(3px, 5vw, 20px);
+color: #1ed38d;
+}
+
+.footer h2{
+font-size: clamp(3px, 5vw, 17px);
+padding-bottom: 1.5rem;
+}
+
+
+.footer p{
+  gap: 5rem 5rem;
+  padding: 3px;
+  text-align: center;
+  font-size: clamp(3px, 5vw, 15px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========================================================TIMELINE @media TIMELINE @media TIMELINE===========================================================*/
+/*========================================================TIMELINE @media TIMELINE @media TIMELINE===========================================================*/
+/*========================================================TIMELINE @media TIMELINE @media TIMELINE===========================================================*/
+
+
+
+/* دا بتاع التصميم المتجاوب — للشاشات الصغيرة */
+@media (max-width: 768px) {
+
+    .timeline::before {
+        left: 30px;       /* ← في الموبايل — نقرب الخط شوية */
+        z-index: 1; 
+    }
+
+    .timeline-item::after {
+        left: 0px;       /* ← النقطة تفضل على الخط */
+        display: none;
+    }
+
+    .time-icon {
+        width: 50px;      /* ← نصغر الأيقونة */
+        height: 50px;
+        margin-left: 10px; /* ← نصغر المسافة */
+        z-index: 4; 
+    }
+
+    .time-text {
+        margin-left: 15px; /* ← نصغر المسافة */
+        max-width: 90%;   /* ← نخليه يناسب الشاشة */
+        padding: 20px;    /* ← نصغر الحشو */
+        z-index: 4; 
+    }
+
+    .time-text h2 {
+        font-size: 1.3rem;
+    }
+
+    .time-text h4 {
+        font-size: 1rem;
+    }
+
+    /* في الشاشات الصغيرة جدًا — نخلي الأيقونة فوق والمربع تحت */
+    @media (max-width: 480px) {
+
+        .timeline-item {
+            flex-direction: column;
+            align-items: flex-start; /* ← نخلي العناصر تبدأ من اليسار — علشان الخط على اليسار */
+            padding-left: 30px;      /* ← نبعد العناصر عن حافة الشاشة — علشان الخط */
+        }
+
+        .time-icon {
+            margin: 15px 0;          /* ← مسافة من فوق وتحت — مش من اليسار */
+        }
+
+        .time-text {
+            margin: 15px 0 0 0 !important; /* ← مسافة من فوق فقط */
+            width: 100%;
+            max-width: 100%;
+        }
+
+        /* النقطة والخط يفضلوا على اليسار */
+        .timeline::before,
+        .timeline-item::after {
+            left: 30px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* شاشات التابلت والموبايل */
+@media (max-width: 768px) {
+  .sq {
+    flex-direction: column;  /* الكروت تبقى تحت بعض بدل ما هي جنب بعض */
+    align-items: center;
+  }
+
+  .both {
+    flex-direction: column;  /* العناصر تيجي تحت بعض */
+    align-items: last baseline;
+    gap: 1rem;
+    text-align: left; /* يخلي النص في النص */
+  }
+
+  .under-about {
+    width: 100%;      /* ياخد عرض الشاشة كله */
+    max-width: 90%;   /* يخلي فيه مسافة من الجنبين */
+    font-size: 16px;  /* خط أصغر علشان يليق على الموبايل */
+  }
+
+  #learning {
+    font-size: 32px; /* العنوان يصغر */
+  }
+
+  .home p {
+    font-size: 16px;
+  }
+
+  .card {
+    max-width: 90%;   /* الكارت ياخد عرض أصغر */
+  }
+}
+
+
+
+
+
+
+/* ================= Responsive Header ================= */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* يخلي العناصر تيجي تحت بعض */
+    padding: 10px;
+  }
+
+  .nav-bar a {
+    margin: 10px 5px;  /* مسافات أصغر */
+    font-size: clamp(8px, 4vw, 12px); /* خط أصغر */
+  }
+
+  .vertical-line {
+    width: 1px;                 /* السمك */
+    height: 30px;               /* الطول أصغر يناسب الموبايل */
+    background-color: white;    /* يفضل ظاهر */
+    margin: 0 5px;              /* مسافة صغيرة بين النص والخط */
+  }
+
+  #icon {
+    width: 35px; /* اللوجو يصغر */
+  }
+
+  #title-of-header {
+    font-size: clamp(10px, 6vw, 16px); /* العنوان يصغر */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

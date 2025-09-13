@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><!--========================================= start head ======================================--> 
+
+
+   <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <!-- استدعاء ملف CSS -->
+  <link rel="stylesheet" href="style.css">
+
+
+  <title>Dameitta Project Landuse / Landcover</title>    <!-- هنا بنكتب عنوان الصفحة -->
+  <link rel="stylesheet" href="style.css">    <!-- هنا بنربط ملف style.css -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>   <!-- مكتبة Chart.js -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- يخلي الموقع يبان مضبوط على الموبايل والكمبيوتر.-->
+  <meta charset="UTF-8">    <!-- يخلي المتصفح يفهم العربية والرموز صح-->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">  <!-- رابط تحميل خط من جوجل فونت -->
+  <link id="icon1" rel="icon" type="image/x-icon" href="Logo/NARSS_logo.svg">   <!-- لوضع أيقونة بجانب عنوان الصفحة  مع وضع مسار الصورة التي تريد عرضها مكان الكلمة icon-path.-->
+
+</head><!--========================================= end head ======================================-->
+<!--0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000-->
+<!--0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000-->
+<body><!-- ================================ start body =========================================== -->
+<!------------------------------------------------------------------------------------------------------------------------->
+  <header class="header" id="header-id"><!--=========================== start header ============================-->
+  
+    <div class="iandt">
+
+      <div class="icna">
+    <img  id="icon" src="Logo/NARSS_logo.svg"/>
+    <h2 class="NARSS">NARSS</h2>
+    </div>
+    <div class="vertical-line"></div>
+    <h1  id="title-of-header">Dameitta Project Landuse / Landcover</h1>  <!-- عنوان رئيسي -->
+    </div>
+
+    <nav class="nav-bar">  <!--=========== بداية قائمة التنقل ============-->
+      <a class="nav-link" id="home-link" href="#home-id">Home</a>  <!-- رابط -->
+      <a class="nav-link" id="about-link" href="#project-id">Project</a>  <!-- رابط -->
+      <a class="nav-link" id="Statistics-link" href="#Statistics-id">Statistics</a>  <!-- رابط -->
+      <a class="nav-link" id="maps-link" href="#maps-id">Maps</a>  <!-- رابط -->
+    </nav><!-- ============= نهاية قائمة التنقل ============-->
+
+  </header><!--=========================== end header ============================-->
+<!--0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000-->
+<!--0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000-->
+  <main><!--=========================== start main ============================-->
+
+    <section class="home" id="home-id"><!--======================================================= start home ===-->
+
+      <div class="hero">
+      <h2 class="hero" id="learning">Landuse / Landcover Changes in Damietta Governorate, Egypt (2000-2023)</h2>
+      <p class="hero">(2000–2013–2023)</p>
+      <p class="hero">Using Remote Sensing to Monitor Environmental Changes Across Time</p>
+      <a class="home-link" id="maps-link" href="#maps-id">Maps</a>  <!-- رابط -->
+      </div>
+
+    </section><!--================================================================================ end home ===-->
+<!------------------------------------------------------------------------------------------------------------------------->
+    <section class="project" id="project-id"><!--=============================================== start project ===-->
+
+      <!------------------------------------------------------------->
+
+      <div class="topp"></div>
+      <h2 class="top-about">About the Project</h2>
+      <p class="under-about">Landuse / Landcover Changes is a critical tool for understanding environmental transformations.
+         This study focuses on Damietta Governorate,
+          analyzing how land use patterns have evolved over 23 
+          years using satellite imagery and advanced remote sensing techniques.</p>
+
+          <!------------------------------------------------------------->
+
+         <section class="sq"><!-- الثلاث تعريفات الاولى start -->
+
+            <div class="card">
+                 <img class="icons" src="Logo/icons-for-sq/1.svg">
+                 <h2>Research Purpose</h2>
+                 <p>To monitor and quantify landcover changes in Damietta using
+                   satellite remote sensing, providing insights
+                    into urban expansion, agricultural changes, 
+                    and environmental impacts.</p>
+            </div>
+
+               <div class="card">
+                 <img class="icons" src="Logo/icons-for-sq/2.svg">
+                 <h2>Study area</h2>
+                 <p>Damietta Governorate was selected due to its strategic location 
+                  at the Nile Delta, rapid urban development, 
+                  and significant agricultural activities making 
+                  it ideal for change detection analysis.</p>
+            </div>
+
+               <div class="card">
+                 <img class="icons" src="Logo/icons-for-sq/3.svg">
+                 <h2>Importance</h2>
+                 <p>Understanding land cover changes is crucial for sustainable development planning,
+                   environmental protection, and informed decision-making 
+                   for future urban and agricultural policies.</p>
+            </div>
+
+         </section><!-- الثلاث تعريفات الاولى end -->
+         
+         <!------------------------------------------------------------->
+
+         <section class="sqdown">
+             
+              <h1>Why Monitor Land Cover Changes?</h1>
+
+          <div class="both">
+             <ul class="uls">
+                <h3>Environmental Benefits</h3>
+                <li>Track deforestation and vegetation loss</li>
+                <li>Monitor water body changes and coastal erosion</li>
+                <li>Assess agricultural land conversion</li>
+                <li>Identify environmental degradation patterns</li>
+             </ul>
+
+            <ul class="uls">
+              <h3>Planning Benefits</h3>
+              <li>Support sustainable urban planning</li>
+              <li>Guide infrastructure development decisions</li>
+              <li>Inform agricultural policy and land use regulations</li>
+              <li>Enable evidence-based environmental management</li>
+            </ul>
+          </div>
+
+         </section>
+
+   <!------------------------------------------------------------->
+
+          <div class="Methodology">
+            <h2>Methodology</h2>
+            <p>Our research employs advanced satellite remote sensing techniques to analyze land cover changes across three critical time periods: 2000, 2013, and 2023.</p>
+          </div>
+
+    <!------------------------------------------------------------->
+
+    <section class="timeline"> <!-- ======= START TIME LINE =======-->
+
+<!-------11111111111111---->
+          <div class="timeline-item">
+
+              
+               <div class="time-text">
+                  <h2>1. Data Collection</h2>
+                  <h4>High-resolution satellite images from Landsat missions for the years 2000, 2013, and 2023. Images were selected based on cloud cover and seasonal compatibility criteria.</h4>
+                  <p>Sources : Landsat 7 ETM+, Landsat 8 OLI</p>
+               </div>
+               
+                      <img class="time-icon" src="Logo/timeline/1.svg">
+
+          </div>
+
+<!------222222222222222222----->
+
+          <div class="timeline-item">
+             
+
+               <div class="time-text">
+                  <h2>2. Image Processing</h2>
+                  <h4>Preprocessing includes atmospheric correction, geometric correction, and radiometric calibration. Images were co-registered and normalized to ensure accurate temporal comparison.</h4>
+                  <p>Tools : ENVI, ArcGIS, Google Earth Engine</p>
+               </div>
+           
+                     <img class="time-icon" src="Logo/timeline/2.svg">
+
+          </div>
+
+<!----333333333333333333------>          
+
+          <div class="timeline-item">
+            
+
+               <div class="time-text">
+                  <h2>3. Landcover Classification</h2>
+                  <h4>Supervised classification using the Maximum Likelihood algorithm to determine landcover categories: urban, agricultural, water bodies, and barren lands.</h4>
+                  <p>Classes : Urban, Agriculture, Water, Vegetation, Bare Land</p>
+               </div>
+
+                     <img class="time-icon" src="Logo/timeline/3.svg">
+              
+          </div>
+
+<!-----444444444444444------>
+
+          <div class="timeline-item">
+            
+
+               <div class="time-text">
+                  <h2>4. Changes Analysis</h2>
+                  <h4>Post-classification comparison method applied to detect changes between time periods. Change matrices and transition maps generated to quantify landcover transformations.</h4>
+                  <p>Analysis : 2000-2013, 2013-2023, 2000-2023</p>
+               </div>
+
+                     <img class="time-icon" src="Logo/timeline/4.svg">
+              
+          </div>
+
+<!------55555555555555----->     
+
+           <div class="timeline-item">
+            
+
+               <div class="time-text">
+                  <h2>5. Results & Validation</h2>
+                  <h4>Accuracy assessment using ground truth data and high-resolution imagery. Statistical analysis and visualization of change patterns and trends over the 23-year period.</h4>
+                  <p>Accuracy :  >85% overall classification accuracy</p>
+               </div>
+
+                     <img class="time-icon" src="Logo/timeline/5.svg">
+              
+          </div>
+
+
+
+    </section>    <!-- ======= END TIME LINE =======-->
+
+
+      
+    </section><!--=============================================================================== end project ===-->
+<!------------------------------------------------------------------------------------------------------------------------->
+    <section class="Statistics" id="Statistics-id"><!--=============================================== start Statistics ===-->
+
+
+      <!------------------------------------------------------------------------------------->
+
+
+      <div class="Statistical-Analysis">
+
+        <h1>Statistics</h1>
+        <h3>Statistical Analysis</h3>
+        <p>In this section, the classification results are statistically evaluated to assess their reliability and accuracy. Two main indicators are used: Overall Accuracy (OA) and the Kappa Coefficient (κ).</p>
+        <p><b>Overall Accuracy (OA) : </b> represents the percentage of correctly classified pixels compared to the total reference data, providing a straightforward measure of performance.</p>
+        <p><b>Kappa Coefficient (κ) : </b> is a more robust statistical index that measures the degree of agreement between the classification results and the reference data, while correcting for the agreement that might occur by chance. Values of κ range between 0 and 1, where values above 0.8 generally indicate strong agreement, values between 0.6 and 0.8 moderate agreement, and values below 0.6 reflect weaker classification reliability.</p>
+        <p>For each study year, the OA and κ values are reported separately to highlight the classification quality of 2000, 2013, and 2023.</p>
+
+        <ul class="uli">
+          <h4><b>In addition</b>, change detection statistics are presented for the three temporal intervals :</h4>
+          <li>2000–2013 (baseline to first change period)</li>
+          <li>2013–2023 (second change period)</li>
+          <li>2000–2023 (overall long-term change)</li>
+        </ul>
+
+        <p>These statistics are expressed in terms of percentage changes for each land cover class, supported by charts and tabular results. Together, they provide a clear picture of the classification reliability and the dynamics of land cover transformations over time.</p>
+
+      </div>
+
+      <!------------------------------------------------------------------------------------->
+
+
+      <div class="tables">
+        <img src="Tables/2000TO2013.png"/>
+        <img src="Tables/2013TO2023.png"/>
+        <img src="Tables/2000TO2023.png"/>
+      </div>
+
+
+     <!------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-------------------------------------------------------->
+
+  <div class="charts-container">   <!-- START CANVAS --> 
+    
+    <!-- الكارت الأول: المخطط الدائري -->
+    <div class="cardcanvas">
+      <h1>Current Land Cover Distribution (2023)</h1>
+      <div class="chart-wrapper">
+        <canvas id="pieChart"></canvas>
+      </div>
+    </div>
+
+    <!-- الكارت الثاني: المخطط الخطي -->
+    <div class="cardcanva">
+      <h1>Change Trends Over Time</h1>
+      <div class="chart-wrapper">
+        <canvas id="lineChart"></canvas>
+      </div>
+    </div>
+
+  </div>                      <!-- END CANVAS -->
+
+<!-------------------------------------------------------->   
+
+<section class="stats-container"> <!-- START Cards Statistics Section-->
+  <div class="stat-card agriculture">
+    <h2>45%</h2>
+    <p>Agriculture</p>
+    <span>↓ 7% since 2000</span>
+  </div>
+
+  <div class="stat-card urban">
+    <h2>28%</h2>
+    <p>Urban</p>
+    <span>↑ 13% since 2000</span>
+  </div>
+
+  <div class="stat-card water">
+    <h2>18%</h2>
+    <p>Water</p>
+    <span>↓ 7% since 2000</span>
+  </div>
+
+  <div class="stat-card others">
+    <h2>9%</h2>
+    <p>Others</p>
+    <span>↑ 1% since 2000</span>
+  </div>
+</section>                        <!-- END Cards Statistics Section-->
+
+<!--------------------------------------------------------------------->
+
+        <section class="key">   <!-- START KEY --> 
+             
+              <h1>Key Findings</h1>
+
+          <div class="bothkey">
+             <ul class="ulskey">
+                <h3 id="h3-1">Major Trends</h3>
+                <li>Rapid urbanization with 87% increase in built-up areas</li>
+                <li>Agricultural land conversion to urban use</li>
+                <li>Coastal modifications affecting water boundaries</li>
+                <li>Infrastructure development along major corridors</li>
+             </ul>
+
+            <ul class="ulskey">
+              <h3 id="h3-2">Environmental Impact</h3>
+              <li>Loss of prime agricultural land to development</li>
+              <li>Changes in local hydrology and drainage patterns</li>
+              <li>Increased impervious surface coverage</li>
+              <li>Potential impacts on local ecosystem services</li>
+            </ul>
+          </div>
+
+         </section>           <!-- END KEY -->
+
+
+
+    </section><!--=============================================================================== end Statistics ===-->
+<!------------------------------------------------------------------------------------------------------------------------->
+    <section class="maps" id="maps-id"><!--====================================================== start maps ===-->
+
+      
+
+          <h2>Interactive Map</h2>
+    <div id="map"></div>
+    <p>
+      This interactive map shows land cover changes across three different years.
+      You can switch between layers to explore the transformation of urban, agriculture,
+      water, vegetation, and bare land areas.
+    </p>
+
+      <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- استدعاء ملف JS -->
+  <script src="script.js"></script>
+
+
+
+
+
+
+
+  <div class="LayOut">
+        <img src="LayOut/2000.jpg"/>
+        <img src="LayOut/2013.jpg"/>
+        <img src="LayOut/2023.jpg"/>
+      </div>
+
+
+    </section><!--================================================================================= end maps ===-->
+<!------------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------------->
+  </main><!--=========================== end main ============================-->
+  <!------------------------------------------------------------------------------------------------------------------------->
+  <footer class="footer"><!--================================================================================= start footer ===-->
+    <h1>Landuse / Landcover Changes Analysis Project</h1>
+    <h2>Damietta, Egypt • 2000-2023 Analysis</h2>
+    <hr style="height: 1px; width: 80%; margin:auto; background-color: #6583a0; border: none;">
+    <br>
+    <p><b>@ 2025 Field Training – NARRS Institution</b></p>
+    <p>Academic Supervisor : Dr. Mohamed Eladham</p>
+    <p>Trainee Student : Khalid Mohamed</p>
+  </footer><!--================================================================================= end footer ===-->
+
+
+<script src="script.js"></script>   <!-- هنا بنربط ملف script.js -->
+</body><!-- ================================ نهاية ال body =========================================== -->
+</html>
